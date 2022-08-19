@@ -1,0 +1,16 @@
+PODS:
+  - DebugNavBar (0.1.0)
+
+DEPENDENCIES:
+  - DebugNavBar (from `../`)
+
+EXTERNAL SOURCES:
+  DebugNavBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DebugNavBar: 048ca8fe8c2df8444732142a9fd257b27c62f724
+
+PODFILE CHECKSUM: fb31cbfe2749abcf6b1a4a81dc39d5675baa773e
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,6 @@
+framework module DebugNavBar {
+  umbrella header "DebugNavBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
