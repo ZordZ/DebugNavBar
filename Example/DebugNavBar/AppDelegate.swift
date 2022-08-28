@@ -18,25 +18,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // You can set UINavigationBar via Storyboard or programmatically - no big difference
+        /*
+         You can set UINavigationBar and UINavigationBarDelegate via Storyboard(like this example) or programmatically - no big difference
+         If you want use your custom UINavigationControllerDelegate and DynamicDebugString:
+         You can create your custom UINavigationControllerDelegate inherited from DebugNavBarDelegate and don't forget call super func.
+         or
+         You can create your custom UINavigationControllerDelegate with stored instance of DebugNavBarDelegate and call namesake func from you implementation.
+         */
+        
         // Example of configurator
-        DebugNavBar.Configurator.height = 10
-        DebugNavBar.Configurator.width = UIScreen.main.bounds.width
+        DebugNavBar.Configurator.height = 10 // if you'll change width - you'll lose auto-width
         DebugNavBar.Configurator.alignmentMode = .center
         DebugNavBar.Configurator.fontColor = .white
         DebugNavBar.Configurator.fontSize = 8.0
-        DebugNavBar.Configurator.needShow = {
+        DebugNavBar.Configurator.showCondition_Block = {
             return true
         }
-        DebugNavBar.Configurator.debugString = {
-            return "Configurator Test String"
+        DebugNavBar.Configurator.debugString_Block = {
+            return "Example Configurator Test String"
         }
-        // not ready
-//        DebugNavBar.Configurator.debugGestureInitializer = {
-//            let longTap = UILongPressGestureRecognizer()
-//            longTap.minimumPressDuration = 1.0
-//            return longTap
-//        }
+        // set your custom gesture
+        DebugNavBar.Configurator.debugGesture_Block = {
+            let longTap = UILongPressGestureRecognizer()
+            longTap.minimumPressDuration = 1.0
+            return longTap
+        }
+        // set your DebugVC
+        DebugNavBar.Configurator.segueDestination_Block = {
+            let vc = TestDebugVC()
+            return vc
+        }
+        // set password check - as example you can implement password check by server
+        // if pass is correct - debug menu is avaliable until restart
+        DebugNavBar.Configurator.passwordCheck_Block = { (enteredPassword, success, error) in
+            enteredPassword == "1234" ? success() : error()
+        }
+        // indicates that debug menu is always enable in debug scheme without password
+        DebugNavBar.Configurator.menuAlwaysEnableInDebug = false
+        // indicates that debug menu is enable in release scheme only after entering password
+        DebugNavBar.Configurator.menuEnableInRelease = false
         
         return true
     }

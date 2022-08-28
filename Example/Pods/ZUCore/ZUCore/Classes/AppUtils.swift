@@ -1,9 +1,9 @@
 //
-//  AppUtils.swift
-//  DebugNavBar
+//  Module: ZUCore
+//  Created by: MrTrent on 21.08.2022
+//  Copyright (c) 2022 Zordz Union
 //
-//  Created by Andrew Zubarew on 19.08.2022.
-//
+
 
 import Foundation
 

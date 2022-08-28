@@ -1,16 +1,23 @@
 PODS:
-  - DebugNavBar (0.1.0)
+  - DebugNavBar (0.1.0):
+    - ZUCore
+  - ZUCore (0.0.5)
 
 DEPENDENCIES:
   - DebugNavBar (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - ZUCore
 
 EXTERNAL SOURCES:
   DebugNavBar:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DebugNavBar: 048ca8fe8c2df8444732142a9fd257b27c62f724
+  DebugNavBar: 76eb7d0c5b52f0591a20bd2ed2d7b451ccaff647
+  ZUCore: 980115f8c0493e2a9240f4b8fa89d7519b383e54
 
-PODFILE CHECKSUM: fb31cbfe2749abcf6b1a4a81dc39d5675baa773e
+PODFILE CHECKSUM: 39ac0f3df40b1b1c08b67c8b48d0ee94557d50dc
 
 COCOAPODS: 1.11.3

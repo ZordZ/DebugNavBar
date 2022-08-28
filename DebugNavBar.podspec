@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DebugNavBar'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of DebugNavBar.'
 
 # This description is used to generate tags and improve search results.
@@ -39,10 +39,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ZUCore'
   
   s.swift_version = '5.0'
-  
-  # this added to correct working for IS_DEBUG_MODE in AppUtils
-  s.pod_target_xcconfig = {'OTHER_SWIFT_FLAGS[config=Debug]' => '-D IS_DEBUG_MODE'}
   
 end

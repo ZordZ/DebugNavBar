@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		745D33F528BA2E5900121321 /* TestDebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D33F428BA2E5900121321 /* TestDebugVC.swift */; };
 		B4E80EFA9CF3F8659431864B /* Pods_DebugNavBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDD7FDE848600A05B02E23C /* Pods_DebugNavBar_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C91A02870498A6D1C58ECE9 /* DebugNavBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DebugNavBar.podspec; path = ../DebugNavBar.podspec; sourceTree = "<group>"; };
+		2C91A02870498A6D1C58ECE9 /* DebugNavBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DebugNavBar.podspec; path = ../DebugNavBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		47B1070D57EE9A41F6FD42DB /* Pods-DebugNavBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugNavBar_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DebugNavBar_Tests/Pods-DebugNavBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CCB761038622B09A482C4B1 /* Pods-DebugNavBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugNavBar_Example.debug.xcconfig"; path = "Target Support Files/Pods-DebugNavBar_Example/Pods-DebugNavBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		50886B344AE517A87D95AFB6 /* Pods-DebugNavBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugNavBar_Tests.release.xcconfig"; path = "Target Support Files/Pods-DebugNavBar_Tests/Pods-DebugNavBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		607FACE51AFB9204008FA782 /* DebugNavBar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebugNavBar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		745D33F428BA2E5900121321 /* TestDebugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDebugVC.swift; sourceTree = "<group>"; };
 		7F9D01CA5713F265A145B813 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		84B753A840F8764B04EA804A /* Pods-DebugNavBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugNavBar_Example.release.xcconfig"; path = "Target Support Files/Pods-DebugNavBar_Example/Pods-DebugNavBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D105D31118B3D8A8694CF02B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				745D33F428BA2E5900121321 /* TestDebugVC.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -314,10 +317,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DebugNavBar_Example/Pods-DebugNavBar_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DebugNavBar/DebugNavBar.framework",
+				"${BUILT_PRODUCTS_DIR}/ZUCore/ZUCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DebugNavBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZUCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				745D33F528BA2E5900121321 /* TestDebugVC.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,17 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "13.0"
   },
-  "source_files": "DebugNavBar/Classes/**/*"
+  "source_files": "DebugNavBar/Classes/**/*",
+  "dependencies": {
+    "ZUCore": [
+
+    ]
+  },
+  "swift_versions": "5.0",
+  "pod_target_xcconfig": {
+    "OTHER_SWIFT_FLAGS[config=Debug]": "-D IS_DEBUG_MODE"
+  },
+  "swift_version": "5.0"
 }

@@ -1,13 +1,13 @@
 //
-//  Bundle_Ext.swift
-//  DebugNavBar
-//
-//  Created by Andrew Zubarew on 19.08.2022.
-//
+//  Module: ZUCore
+//  Created by: MrTrent on 21.08.2022
+//  Copyright (c) 2022 Zordz Union
+//  
+
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     var displayName: String {
         return (object(forInfoDictionaryKey: "CFBundleDisplayName") ?? object(forInfoDictionaryKey: "CFBundleName")) as? String ?? "unknown"
     }
