@@ -8,6 +8,7 @@
 
 import UIKit
 import DebugNavBar
+import ZUCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,11 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DebugNavBar.Configurator.fontColor = .white
         DebugNavBar.Configurator.fontSize = 8.0
         DebugNavBar.Configurator.showCondition_Block = {
-            return true
+            return AppUtils.isDebug
         }
         DebugNavBar.Configurator.debugString_Block = {
             return "Example Configurator Test String"
         }
+        
+        
         // set your custom gesture
         DebugNavBar.Configurator.debugGesture_Block = {
             let longTap = UILongPressGestureRecognizer()

@@ -36,7 +36,7 @@ open class DebugNavBar: UINavigationBar {
         // correcting frame
         updateDebugInfoLayerFrame()
         // show/hide
-        textLayer?.isHidden = !_Configurator.shared.needShow
+        textLayer?.isHidden = !_Configurator.shared.needShow || !_Configurator.shared.passwordIsCorrect
     }
     
     private func updateDebugInfoLayerFrame() {
